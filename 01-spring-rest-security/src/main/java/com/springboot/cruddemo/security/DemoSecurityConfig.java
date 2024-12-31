@@ -16,19 +16,19 @@ public class DemoSecurityConfig {
 
         UserDetails john = User.builder()
                 .username("john")
-                .password("test123")
+                .password("{noop}test123")
                 .roles("EMPLOYEE")
                 .build();
 
         UserDetails mary = User.builder()
                 .username("mary")
-                .password("test123")
+                .password("{noop}test123")
                 .roles("EMPLOYEE" , "MANAGER")
                 .build();
 
         UserDetails susan = User.builder()
                 .username("susan")
-                .password("test123")
+                .password("{noop}test123")
                 .roles("EMPLOYEE", "MANAGER", "ADMIN")
                 .build();
 
